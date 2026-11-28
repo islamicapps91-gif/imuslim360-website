@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>iMuslim360 — Quran, Prayer Times &amp; Azkar for iPhone</title>
+<meta name="description" content="The Quran with recitation, translation and tafseer, plus prayer times, Qibla and azkar, in one app for iPhone. Free, with no ads.">
+<meta name="apple-itunes-app" content="app-id=6758240191">
+<meta name="theme-color" content="#0A1628">
+<meta property="og:title" content="iMuslim360 | دليل المسلم">
+<meta property="og:description" content="The Quran, prayer times and azkar in one app. Free, with no ads.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://islamicapps91-gif.github.io/imuslim360-website/en/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="icon" href="img/icon.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #2D9F93;
+    --teal-light: #5BBFB3;
+    --teal-dark: #1E8577;
+    --deep: #0A1628;
+    --deep-mid: #0E1B30;
+    --surface: #142240;
+    --line: rgba(91,191,179,0.18);
+    --text: #F5F0E8;
+    --muted: #B9C3CF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--deep);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 560px; margin: 0 auto; padding: 0 20px; }
+
+  .hero {
+    text-align: center;
+    padding: 44px 0 28px;
+    background: radial-gradient(120% 80% at 50% 0%, rgba(45,159,147,0.28) 0%, rgba(10,22,40,0) 70%);
+  }
+  .icon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+  h1 { font-size: 34px; font-weight: 700; margin-top: 18px; line-height: 1.3; }
+  .latin { font-family: 'IBM Plex Sans Arabic', 'Geeza Pro', sans-serif; font-size: 17px; font-weight: 600; color: var(--teal-light); direction: rtl; margin-top: 2px; }
+  .tagline { font-size: 18px; color: var(--muted); margin: 16px auto 0; max-width: 420px; }
+
+  .cta {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 100%; max-width: 360px; margin: 26px auto 0;
+    padding: 16px 24px; border-radius: 16px;
+    background: var(--teal); color: #fff; text-decoration: none;
+    font-size: 20px; font-weight: 700; line-height: 1.3;
+    box-shadow: 0 8px 24px rgba(45,159,147,0.35);
+    transition: transform .15s ease, background .15s ease;
+  }
+  .cta small { display: block; font-size: 13px; font-weight: 400; opacity: 0.9; margin-top: 2px; }
+  .cta:active { transform: scale(0.98); background: var(--teal-dark); }
+  .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
+  .chip { font-size: 13px; color: var(--teal-light); border: 1px solid var(--line); border-radius: 99px; padding: 4px 12px; }
+
+  .shots {
+    display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+    padding: 8px 20px 18px; margin: 8px auto 0; max-width: 560px;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .shots::-webkit-scrollbar { display: none; }
+  .shots img {
+    flex: 0 0 auto; width: 62%; max-width: 250px; height: auto;
+    border-radius: 18px; scroll-snap-align: center;
+    border: 1px solid var(--line);
+  }
+
+  h2 { font-size: 22px; font-weight: 700; text-align: center; margin: 30px 0 16px; }
+  .features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .feat { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 14px; }
+  .feat b { display: block; font-size: 16px; margin-bottom: 4px; }
+  .feat span { font-size: 14px; color: var(--muted); line-height: 1.6; display: block; }
+  .dot { width: 30px; height: 30px; border-radius: 9px; background: rgba(45,159,147,0.18); display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+  .dot svg { width: 18px; height: 18px; stroke: var(--teal-light); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  .bottom { text-align: center; padding: 34px 0 20px; }
+  .bottom p { color: var(--muted); font-size: 15px; }
+
+  footer { text-align: center; padding: 24px 20px 40px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 20px; }
+  footer a { color: var(--teal-light); text-decoration: none; margin: 0 8px; }
+
+  @media (max-width: 360px) {
+    h1 { font-size: 29px; }
+    .features { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="icon" src="img/icon.webp" width="96" height="96" alt="iMuslim360 app icon">
+    <h1>iMuslim360</h1>
+    <div class="latin">دليل المسلم</div>
+    <p class="tagline">The Quran with recitation, translation and tafseer, prayer times, Qibla and azkar, all in one app.</p>
+    <a class="cta store-link" href="https://apps.apple.com/app/apple-store/id6758240191?pt=128149611&amp;ct=landing_en&amp;mt=8">
+      Download free
+      <small>on the App Store for iPhone and iPad</small>
+    </a>
+    <div class="chips">
+      <span class="chip">Completely free</span>
+      <span class="chip">No ads</span>
+      <span class="chip">English, Arabic, French, Urdu &amp; more</span>
+    </div>
+  </div>
+</header>
+
+<section class="shots" aria-label="Screenshots">
+  <img src="img/reader.webp" width="540" height="1173" alt="The Mushaf, page by page">
+  <img src="img/tafseer.webp" width="540" height="1173" alt="Translation and tafseer" loading="lazy">
+  <img src="img/prayer.webp" width="540" height="1173" alt="Prayer times" loading="lazy">
+  <img src="img/home.webp" width="540" height="1173" alt="Today screen" loading="lazy">
+</section>
+
+<main class="wrap">
+  <h2>Everything for your day</h2>
+  <div class="features">
+    <div class="feat">
+      <div class="dot"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/></svg></div>
+      <b>The Quran</b>
+      <span>The Mushaf page by page in clear script, or verse by verse with translation.</span>
+    </div>
+    <div class="feat">
+      <div class="dot"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+      <b>Follow the recitation</b>
+      <span>Listen to renowned reciters as each verse is highlighted.</span>
+    </div>
+    <div class="feat">
+      <div class="dot"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/></svg></div>
+      <b>Translation &amp; tafseer</b>
+      <span>Understand every verse in your language, right on the page.</span>
+    </div>
+    <div class="feat">
+      <div class="dot"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></div>
+      <b>Prayer times</b>
+      <span>The adhan on time wherever you are, plus the Qibla direction.</span>
+    </div>
+    <div class="feat">
+      <div class="dot"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg></div>
+      <b>Morning &amp; evening azkar</b>
+      <span>Your daily remembrances in one place, with audio.</span>
+    </div>
+    <div class="feat">
+      <div class="dot"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <b>Memorise &amp; complete</b>
+      <span>Memorisation and khatmah plans that track your progress day by day.</span>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <p>Start today, and keep it with you all day.</p>
+    <a class="cta store-link" href="https://apps.apple.com/app/apple-store/id6758240191?pt=128149611&amp;ct=landing_en&amp;mt=8">
+      Download iMuslim360
+      <small>Free, with no ads</small>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <a href="../">Main site</a>
+  <a href="../ar/">العربية</a>
+  <a href="https://islamicapps91-gif.github.io/imuslim360-privacy/">Privacy policy</a>
+</footer>
+
+<script>
+  (function () {
+    try {
+      var ct = new URLSearchParams(window.location.search).get('ct') || '';
+      if (!/^[a-z0-9_]{1,40}$/i.test(ct)) { ct = 'landing_en'; }
+      var url = 'https://apps.apple.com/app/apple-store/id6758240191?pt=128149611&ct=' + ct + '&mt=8';
+      var links = document.querySelectorAll('.store-link');
+      for (var i = 0; i < links.length; i++) { links[i].href = url; }
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
